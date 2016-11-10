@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Expression_Example' do
+  pod 'Expression', :path => '../'
+
+  target 'Expression_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
