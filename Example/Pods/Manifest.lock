@@ -1,0 +1,16 @@
+PODS:
+  - Expression (0.1.0)
+
+DEPENDENCIES:
+  - Expression (from `../`)
+
+EXTERNAL SOURCES:
+  Expression:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expression: 267989b314c7a88d58c87e2b780881483d8a4f37
+
+PODFILE CHECKSUM: 70eb08046ff09ac1119dbc8a747c0e1f27b3c062
+
+COCOAPODS: 1.2.0.beta.1
