@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "SwiftExpression_Example.app"
-               BlueprintName = "SwiftExpression_Example"
-               ReferencedContainer = "container:SwiftExpression.xcodeproj">
+               BuildableName = "AVExpression_Example.app"
+               BlueprintName = "AVExpression_Example"
+               ReferencedContainer = "container:AVExpression.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SwiftExpression_Tests.xctest"
-               BlueprintName = "SwiftExpression_Tests"
-               ReferencedContainer = "container:SwiftExpression.xcodeproj">
+               BuildableName = "AVExpression_Tests.xctest"
+               BlueprintName = "AVExpression_Tests"
+               ReferencedContainer = "container:AVExpression.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "SwiftExpression_Tests.xctest"
-               BlueprintName = "SwiftExpression_Tests"
-               ReferencedContainer = "container:SwiftExpression.xcodeproj">
+               BuildableName = "AVExpression_Tests.xctest"
+               BlueprintName = "AVExpression_Tests"
+               ReferencedContainer = "container:AVExpression.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftExpression_Example.app"
-            BlueprintName = "SwiftExpression_Example"
-            ReferencedContainer = "container:SwiftExpression.xcodeproj">
+            BuildableName = "AVExpression_Example.app"
+            BlueprintName = "AVExpression_Example"
+            ReferencedContainer = "container:AVExpression.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftExpression_Example.app"
-            BlueprintName = "SwiftExpression_Example"
-            ReferencedContainer = "container:SwiftExpression.xcodeproj">
+            BuildableName = "AVExpression_Example.app"
+            BlueprintName = "AVExpression_Example"
+            ReferencedContainer = "container:AVExpression.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "SwiftExpression_Example.app"
-            BlueprintName = "SwiftExpression_Example"
-            ReferencedContainer = "container:SwiftExpression.xcodeproj">
+            BuildableName = "AVExpression_Example.app"
+            BlueprintName = "AVExpression_Example"
+            ReferencedContainer = "container:AVExpression.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
