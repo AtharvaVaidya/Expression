@@ -31,20 +31,20 @@
 		0A592676C1E8ACDC49F4695F /* Pods_Expression_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expression_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1199D7CA5FE3A5268433BA0C /* Pods-Expression_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expression_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expression_Example/Pods-Expression_Example.release.xcconfig"; sourceTree = "<group>"; };
 		5C08EC0D45E0A23391ED4C02 /* Pods_Expression_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expression_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD01AFB9204008FA782 /* Expression_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expression_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* SwiftExpression_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExpression_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Expression_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Expression_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* SwiftExpression_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftExpression_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		635AEACC9ED5259718C5F088 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		A979598882856C73A7C3EFF2 /* Pods-Expression_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expression_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expression_Tests/Pods-Expression_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AFF537C1CD074D68E0DE5380 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		E64E553913E31B9B4C28EC13 /* Expression.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Expression.podspec; path = ../Expression.podspec; sourceTree = "<group>"; };
+		E64E553913E31B9B4C28EC13 /* SwiftExpression.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftExpression.podspec; path = ../SwiftExpression.podspec; sourceTree = "<group>"; };
 		F07E40EC53BE0671AEDF5AC7 /* Pods-Expression_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expression_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expression_Tests/Pods-Expression_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F5B6E41B6D78472763CE4D78 /* Pods-Expression_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expression_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Expression_Example/Pods-Expression_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,8 +93,8 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* Expression_Example.app */,
-				607FACE51AFB9204008FA782 /* Expression_Tests.xctest */,
+				607FACD01AFB9204008FA782 /* SwiftExpression_Example.app */,
+				607FACE51AFB9204008FA782 /* SwiftExpression_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,7 +141,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				E64E553913E31B9B4C28EC13 /* Expression.podspec */,
+				E64E553913E31B9B4C28EC13 /* SwiftExpression.podspec */,
 				AFF537C1CD074D68E0DE5380 /* README.md */,
 				635AEACC9ED5259718C5F088 /* LICENSE */,
 			);
@@ -162,9 +162,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* Expression_Example */ = {
+		607FACCF1AFB9204008FA782 /* SwiftExpression_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Expression_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftExpression_Example" */;
 			buildPhases = (
 				225AE81A92511CA56C48E320 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -177,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = Expression_Example;
+			name = SwiftExpression_Example;
 			productName = Expression;
-			productReference = 607FACD01AFB9204008FA782 /* Expression_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* SwiftExpression_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		607FACE41AFB9204008FA782 /* Expression_Tests */ = {
+		607FACE41AFB9204008FA782 /* SwiftExpression_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Expression_Tests" */;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftExpression_Tests" */;
 			buildPhases = (
 				489D5A53AED56C984B3E5EFD /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
@@ -198,9 +198,9 @@
 			dependencies = (
 				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
 			);
-			name = Expression_Tests;
+			name = SwiftExpression_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Expression_Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* SwiftExpression_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -224,7 +224,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Expression" */;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SwiftExpression" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,8 +237,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* Expression_Example */,
-				607FACE41AFB9204008FA782 /* Expression_Tests */,
+				607FACCF1AFB9204008FA782 /* SwiftExpression_Example */,
+				607FACE41AFB9204008FA782 /* SwiftExpression_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -379,7 +379,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* Expression_Example */;
+			target = 607FACCF1AFB9204008FA782 /* SwiftExpression_Example */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -491,6 +491,7 @@
 			baseConfigurationReference = F5B6E41B6D78472763CE4D78 /* Pods-Expression_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Expression/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -505,6 +506,7 @@
 			baseConfigurationReference = 1199D7CA5FE3A5268433BA0C /* Pods-Expression_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Expression/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -553,7 +555,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Expression" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "SwiftExpression" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACED1AFB9204008FA782 /* Debug */,
@@ -562,7 +564,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Expression_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftExpression_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,
@@ -571,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Expression_Tests" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "SwiftExpression_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF31AFB9204008FA782 /* Debug */,
