@@ -1,4 +1,4 @@
-# Expression
+# AVExpression
 
 [![CI Status](http://img.shields.io/travis/TechieCSG/Expression.svg?style=flat)](https://travis-ci.org/TechieCSG/Expression)
 [![Version](https://img.shields.io/cocoapods/v/Expression.svg?style=flat)](http://cocoapods.org/pods/Expression)
@@ -17,7 +17,7 @@ Expression is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Expression"
+pod "AVExpression"
 ```
 
 ## Author
