@@ -22,7 +22,7 @@ pod "Expression"
 
 ## Author
 
-TechieCSG, atharva.vaidya01@gmail.com
+Atharva Vaidya, atharva.vaidya01@gmail.com
 
 ## License
 
