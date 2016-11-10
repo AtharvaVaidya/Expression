@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Expression'
+  s.name             = 'SwiftExpression'
   s.version          = '1.0.0'
   s.summary          = 'NSExpression converted to Swift.'
 
