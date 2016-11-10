@@ -77,14 +77,8 @@ extension Stack: Sequence
     }
 }
 
-
-//
-//  ShuntingYardAlgorithm.swift
-//
-//
-//  Created by Ali Hafizji on 2016-02-25.
-//
-//
+//Credits to Ali Hafizji on GitHub.
+//https://github.com/raywenderlich/swift-algorithm-club/tree/master/Shunting%20Yard
 internal enum OperatorAssociativity {
     case LeftAssociative
     case RightAssociative
