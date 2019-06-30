@@ -32,7 +32,41 @@ open class Expression {
             return nil
         }
     }
-
+    
+    private func parseIntoTokens(from string: String) -> [Token] {
+        var stack = [Token]()
+        var numberString = ""
+        
+        for (index, character) in string.unicodeScalars.enumerated() {
+            if character.isDigit() || character.isDot() {
+                numberString += "\(character)"
+            } else if character.isOperator() {
+                if let number = Double(numberString) {
+                    stack.append(Token(operand: number))
+                    numberString = ""
+                }
+    
+                stack.append(Token(operatorType: OperatorType(rawValue: "\(character)")!))
+            } else if character.isParanthesis() {
+                if let number = Double(numberString) {
+                    stack.append(Token(operand: number))
+                    numberString = ""
+                }
+                
+                stack.append(Token(tokenType: character == "(" ? .openBracket : .closeBracket))
+            }
+            
+            if index == string.unicodeScalars.count - 1 {
+                if let number = Double(numberString) {
+                    stack.append(Token(operand: number))
+                    numberString = ""
+                }
+            }
+        }
+        
+        return stack
+    }
+    
     private func parseIntoNumbersAndOperators(from string: String) -> ([Double], [OperatorType]) {
         var numbers: [Double] = []
         var operators: [OperatorType] = []
@@ -92,35 +126,49 @@ open class Expression {
         let expressionBuilder = InfixExpressionBuilder()
 
         let (numbers, _) = parseIntoNumbersAndOperators(from: expression)
+        var tokenStack = parseIntoTokens(from: expression)
         
         var numbersIndex = 0
         
-        for (index, char) in expression.unicodeScalars.enumerated() {
-            print("Char: \(char)")
-            
-            if char.isOperator() {
-                if let number = numbers[safe: numbersIndex] {
-                    _ = expressionBuilder.addOperand(operand: number)
-                    numbersIndex += 1
-                }
-                _ = expressionBuilder.addOperator(operatorType: OperatorType(rawValue: "\(char)")!)
-            }
-            if char.isParanthesis() {
-                if char == "(" {
-                    expressionBuilder.addOpenBracket()
-                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
-                } else {
-                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
-                    expressionBuilder.addCloseBracket()
-                }
-                numbersIndex += 1
-            }
-            if index == expression.unicodeScalars.count - 1 {
-                if let number = numbers[safe: numbersIndex] {
-                    _ = expressionBuilder.addOperand(operand: number)
-                }
+        for token in tokenStack {
+            switch token.tokenType {
+            case .openBracket:
+                expressionBuilder.addOpenBracket()
+            case .closeBracket:
+                expressionBuilder.addCloseBracket()
+            case .operand(let operand):
+                expressionBuilder.addOperand(operand: operand)
+            case .operatorToken(let operatorToken):
+                expressionBuilder.addOperator(operatorType: operatorToken.operatorType)
             }
         }
+//        for (index, char) in expression.unicodeScalars.enumerated() {
+//            print("Char: \(char)")
+//
+//            if char.isOperator() {
+//                if let number = numbers[safe: numbersIndex] {
+//                    _ = expressionBuilder.addOperand(operand: number)
+//                    numbersIndex += 1
+//                }
+//                _ = expressionBuilder.addOperator(operatorType: OperatorType(rawValue: "\(char)")!)
+//            }
+//
+//            if char.isParanthesis() {
+//                if char == "(" {
+//                    expressionBuilder.addOpenBracket()
+//                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
+//                } else {
+//                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
+//                    expressionBuilder.addCloseBracket()
+//                }
+//                numbersIndex += 1
+//            }
+//            if index == expression.unicodeScalars.count - 1 {
+//                if let number = numbers[safe: numbersIndex] {
+//                    _ = expressionBuilder.addOperand(operand: number)
+//                }
+//            }
+//        }
         
         print("Expression: \(expressionBuilder.build())")
         let (RPN, tokens) = reversePolishNotation(expression: expressionBuilder.build())
@@ -128,6 +176,7 @@ open class Expression {
         var stack = Stack<Token>()
 
         var tokenCounter = 0
+        
         for token in tokens {
             if token.isOperand { stack.push(token) }
             else {
@@ -140,8 +189,12 @@ open class Expression {
 
             tokenCounter += 1
         }
-
-        return Double((stack.pop()?.description)!)!
+        
+        if let description = stack.pop()?.description, let result = Double(description) {
+            return result
+        } else {
+            return 0
+        }
     }
 
     func isValidExpression() -> Bool {
