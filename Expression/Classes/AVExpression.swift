@@ -125,11 +125,8 @@ open class Expression {
     private func computeExpression() -> Double {
         let expressionBuilder = InfixExpressionBuilder()
 
-        let (numbers, _) = parseIntoNumbersAndOperators(from: expression)
-        var tokenStack = parseIntoTokens(from: expression)
-        
-        var numbersIndex = 0
-        
+        let tokenStack = parseIntoTokens(from: expression)
+                
         for token in tokenStack {
             switch token.tokenType {
             case .openBracket:
@@ -142,37 +139,9 @@ open class Expression {
                 expressionBuilder.addOperator(operatorType: operatorToken.operatorType)
             }
         }
-//        for (index, char) in expression.unicodeScalars.enumerated() {
-//            print("Char: \(char)")
-//
-//            if char.isOperator() {
-//                if let number = numbers[safe: numbersIndex] {
-//                    _ = expressionBuilder.addOperand(operand: number)
-//                    numbersIndex += 1
-//                }
-//                _ = expressionBuilder.addOperator(operatorType: OperatorType(rawValue: "\(char)")!)
-//            }
-//
-//            if char.isParanthesis() {
-//                if char == "(" {
-//                    expressionBuilder.addOpenBracket()
-//                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
-//                } else {
-//                    expressionBuilder.addOperand(operand: numbers[numbersIndex])
-//                    expressionBuilder.addCloseBracket()
-//                }
-//                numbersIndex += 1
-//            }
-//            if index == expression.unicodeScalars.count - 1 {
-//                if let number = numbers[safe: numbersIndex] {
-//                    _ = expressionBuilder.addOperand(operand: number)
-//                }
-//            }
-//        }
         
-        print("Expression: \(expressionBuilder.build())")
-        let (RPN, tokens) = reversePolishNotation(expression: expressionBuilder.build())
-        print("RPN: \(RPN)")
+        let (_, tokens) = reversePolishNotation(expression: expressionBuilder.build())
+        
         var stack = Stack<Token>()
 
         var tokenCounter = 0
