@@ -25,10 +25,8 @@ open class Expression {
     // Follows the PEMDAS rule.
     public func expressionResult() -> Double? {
         if isValidExpression() {
-            print("Expression: \(expression) is valid")
             return computeExpression()
         } else {
-            print("Expression: \(expression) isn't valid")
             return nil
         }
     }
@@ -88,8 +86,6 @@ open class Expression {
 
         numbers.append(Double(number)!)
 
-        print("Numbers: \(numbers), Operators: \(operators)")
-
         return (numbers, operators)
     }
 
@@ -97,7 +93,6 @@ open class Expression {
 
     func resultFrom(operating operater: OperatorType, on numbers: [Double]) -> Double {
         let n1 = numbers[0], n2 = numbers[1]
-        print("Operating on \(numbers) with \(operater)")
         switch operater {
         case .add: return n1 + n2
         case .subtract: return n2 - n1
@@ -110,7 +105,6 @@ open class Expression {
 
     func resultFrom(operating operater: String, on numbers: [Double]) -> Double {
         let n1 = numbers[0], n2 = numbers[1]
-        print("Operating on \(numbers) with \(operater)")
         switch operater {
         case OperatorType.add.rawValue: return n1 + n2
         case OperatorType.subtract.rawValue: return n2 - n1
